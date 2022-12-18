@@ -26,7 +26,7 @@ const Buttons = ({ selectedBtn }) => {
           onClick={() => selectedBtn(singleBtn)}
           key={i}
           type="button"
-          className="px-8 py-3 font-semibold border rounded border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-gray-100"
+          className="px-8 py-3 font-semibold border rounded border-gray-800 text-gray-800 hover:bg-secondary hover:border-0 hover:text-gray-100"
         >
           {singleBtn?.name}
         </button>

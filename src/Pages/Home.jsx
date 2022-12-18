@@ -26,14 +26,14 @@ const Home = () => {
       })
       .catch((err) => {
         console.log(err.message);
-        toast.error('Your local storage is full')
+        toast.error("Your local storage is full");
       });
   };
 
   return (
     <div className="max-w-4xl mx-auto mb-10">
       <div className="grid grid-cols-2 gap-10 mt-20 mb-10">
-        <div className="card bg-base-200 shadow-xl">
+        <div className="card bg-accent shadow-xl">
           <div className="card-body text-lg">
             <p>Start: {btn1Data?.start}</p>
             <p>End: {btn1Data?.end}</p>
@@ -41,7 +41,7 @@ const Home = () => {
             <p>End Save: {btn1Data?.endSave}</p>
           </div>
         </div>
-        <div className="card bg-base-200 shadow-xl">
+        <div className="card bg-accent shadow-xl">
           <div className="card-body text-lg">
             <p>Start: {btn2Data?.start}</p>
             <p>End: {btn2Data?.end}</p>
@@ -49,7 +49,7 @@ const Home = () => {
             <p>End Save: {btn2Data?.endSave}</p>
           </div>
         </div>
-        <div className="card bg-base-200 shadow-xl">
+        <div className="card bg-accent shadow-xl">
           <div className="card-body text-lg">
             <p>Start: {btn3Data?.start}</p>
             <p>End: {btn3Data?.end}</p>
@@ -57,7 +57,7 @@ const Home = () => {
             <p>End Save: {btn3Data?.endSave}</p>
           </div>
         </div>
-        <div className="card bg-base-200 shadow-xl">
+        <div className="card bg-accent shadow-xl">
           <div className="card-body text-lg">
             <p>Start: {btn4Data?.start}</p>
             <p>End: {btn4Data?.end}</p>

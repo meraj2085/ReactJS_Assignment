@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const CurrentTime = () => {
   const [currentTime, setCurrentTime] = useState(Date.now());
-  useEffect(() => {
+
+  const GetCurrentTime = () => {
     const time = Date.now();
     setCurrentTime(time);
-  }, [currentTime]);
+  };
+  setInterval(GetCurrentTime, 1);
 
   return (
     <div className="max-w-4xl mx-auto mb-20">
-      <button
-        type="button"
-        className="px-8 py-3 w-full font-semibold rounded bg-gray-800 text-gray-100"
-      >
+      <p className="px-8 py-3 w-full font-semibold text-center rounded bg-gray-600 text-gray-100">
         {currentTime}
-      </button>
+      </p>
     </div>
   );
 };
