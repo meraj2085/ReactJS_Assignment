@@ -4,7 +4,6 @@ export const GetTime = async (api) => {
   const data = await res.json();
   const end = Date.now();
 
-
   const storedData = localStorage.getItem("Button_Data");
   let ButtonData;
   if (!storedData) {

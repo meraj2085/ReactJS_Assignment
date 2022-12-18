@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-hot-toast";
 import { GetTime } from "../Utilities/GetTime";
 import Buttons from "./Buttons";
 
@@ -12,6 +13,7 @@ const Home = () => {
     const api = btn.api;
     GetTime(api)
       .then((data) => {
+        toast.success(`${btn?.name} data added to LocalStorage`);
         if (btn.name === "Button 1") {
           setBtn1Data(data);
         } else if (btn.name === "Button 2") {
@@ -22,7 +24,10 @@ const Home = () => {
           setBtn4Data(data);
         }
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {
+        console.log(err.message);
+        toast.error('Your local storage is full')
+      });
   };
 
   return (
