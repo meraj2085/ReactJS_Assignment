@@ -1,6 +1,6 @@
 import React from "react";
 
-const Buttons = () => {
+const Buttons = ({ selectedBtn }) => {
   const ButtonGroup = [
     {
       name: "Button 1",
@@ -23,6 +23,7 @@ const Buttons = () => {
     <div className="grid grid-cols-2 gap-5">
       {ButtonGroup.map((singleBtn, i) => (
         <button
+          onClick={() => selectedBtn(singleBtn)}
           key={i}
           type="button"
           className="px-8 py-3 font-semibold border rounded border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-gray-100"

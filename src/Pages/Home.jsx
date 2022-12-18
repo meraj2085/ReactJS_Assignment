@@ -3,10 +3,13 @@ import { GetTime } from "../Utilities/GetTime";
 import Buttons from "./Buttons";
 
 const Home = () => {
-  GetTime()
-  .then(data => console.log(data))
-  .catch(err => console.log(err.message))
-  
+  const selectedBtn = (btn) => {
+    const api = btn.api;
+    GetTime(api)
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err.message));
+  };
+
   return (
     <div className="max-w-4xl mx-auto mb-10">
       <div className="grid grid-cols-2 gap-10 mt-20 mb-10">
@@ -43,7 +46,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Buttons></Buttons>
+      <Buttons selectedBtn={selectedBtn}></Buttons>
     </div>
   );
 };
