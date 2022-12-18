@@ -1,7 +1,12 @@
 import React from "react";
+import { GetTime } from "../Utilities/GetTime";
 import Buttons from "./Buttons";
 
 const Home = () => {
+  GetTime()
+  .then(data => console.log(data))
+  .catch(err => console.log(err.message))
+  
   return (
     <div className="max-w-4xl mx-auto mb-10">
       <div className="grid grid-cols-2 gap-10 mt-20 mb-10">
