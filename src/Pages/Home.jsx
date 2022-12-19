@@ -31,8 +31,8 @@ const Home = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mb-10">
-      <div className="grid grid-cols-2 gap-10 mt-20 mb-10">
+    <div className="max-w-4xl mx-auto mb-10 px-5">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-20 mb-10">
         <div className="card bg-accent shadow-xl">
           <div className="card-body text-lg">
             <p>Start: {btn1Data?.start}</p>
